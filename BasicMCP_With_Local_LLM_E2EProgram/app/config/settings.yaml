@@ -1,0 +1,24 @@
+
+# Global configuration for the MCP + Ollama demo
+llm:
+  # Any local Ollama model works. Options:
+  #   - llama3.2:3b-instruct-q4_K_M
+  #   - phi3:mini
+  #   - qwen2.5:3b-instruct
+  model: "tinyllama:latest"
+  timeout_s: 30
+
+mcp:
+  # How to launch the MCP server that exposes tools (via STDIO)
+  command: "C:/Aravind/Knowledge/AI/MCP/BasicMCP_With_Local_LLM_E2EProgram/.venv/Scripts/python.exe"
+  args: ["C:/Aravind/Knowledge/AI/MCP/BasicMCP_With_Local_LLM_E2EProgram/app/mcp/mcp_server.py"]
+  env: null
+
+servers:
+  # REST API that the MCP tools call under the hood
+  rest_host: "127.0.0.1"
+  rest_port: 8000
+
+  # HTTP wrapper around the MCP tools (optional)
+  mcp_http_host: "127.0.0.1"
+  mcp_http_port: 9000
