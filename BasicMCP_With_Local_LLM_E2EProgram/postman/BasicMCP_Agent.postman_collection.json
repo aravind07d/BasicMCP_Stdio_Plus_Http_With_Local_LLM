@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "BasicMCP Agent",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Say Hello",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/hello",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "hello"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Numbers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"a\": 12.5,\n  \"b\": 7.25\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/add_numbers",
+          "protocol": "http",
+          "host": [
+            "127.0.0.1"
+          ],
+          "port": "8000",
+          "path": [
+            "add_numbers"
+          ]
+        }
+      }
+    }
+  ]
+}
